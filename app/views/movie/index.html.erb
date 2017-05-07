@@ -1,0 +1,22 @@
+<div class="container">
+  <form action='/movie/model_create' method='get'>
+   <div class="form-group">
+    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+     </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+   <% @movie.each do |m| %>
+   <div class="row">
+       <div class="col-md-4 poster">
+        <img src="<%= m.poster %>" style = "width:100%" />
+       </div>
+       <div class="col-md-8">
+       <p>Title : <%= m.title %></p>
+       <p>Director : <%= m.description %></p>
+       <p>Genre : <%= m.genere %></p>
+       </div>
+</div>
+ <a href="/movie/edit/<%= m.id %>"class="btn btn-primary">edit</a>
+ <a href="/movie/model_destroy/<%= m.id %>"class="btn btn-primary">destroy</a>
+  <% end %>
+</div>

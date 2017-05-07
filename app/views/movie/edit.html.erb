@@ -1,0 +1,25 @@
+<div class="container">
+  <form action='/movie/model_update' method='get'>
+        <input value="<%= @movie_id %>" type="hidden" name="id"/>
+      <div class="row"></div>
+          <div class="col-md-4"poster>
+           <img src="<%= @movie.poster %>" />
+          </div>
+          <div class="col-md-8">
+           Title
+           <div class="form-group">
+            <input type="text" class="form-control" id="title" name="title" value="<%= @movie.title%>">
+     </div>
+     Director :
+     <div class="form-group">
+            <input type="text" class="form-control" id="title" name="director" value="<%= @movie.description%>">
+     </div>
+     
+      Genre :
+     <div class="form-group">
+            <input type="text" class="form-control" id="title" name="genre" value="<%= @movie.genere%>">
+     
+ </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+</div>
